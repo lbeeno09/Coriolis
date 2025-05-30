@@ -1,0 +1,8 @@
+# Ignore build files
+build/**
+vcpkg_installed/**
+
+# Ignore dev env files
+Memo.md
+.vscode/**
+*.code-workspace
