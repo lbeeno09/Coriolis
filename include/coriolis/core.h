@@ -6,9 +6,9 @@
 
 namespace coriolis
 {
+
 class Vector3
 {
-
 public:
 	/* Constructors */
 	Vector3() : x(0), y(0), z(0) { }
@@ -17,6 +17,7 @@ public:
 
 
 	/* Operators */
+	/* Index */
 	real operator[](unsigned i) const
 	{
 		if(i == 0) return x;
@@ -31,7 +32,7 @@ public:
 		return z;
 	}
 
-
+	/* Four Basic Ops*/
 	Vector3 operator+(const Vector3 &v) const
 	{
 		return Vector3(x + v.x, y + v.y, z + v.z);
@@ -143,6 +144,40 @@ public:
 			(*this) *= (real)1.0 / l;
 		}
 	}
+
+
+	bool operator==(const Vector3 &other) const
+	{
+		return x == other.x && y == other.y && z == other.z;
+	}
+
+	bool operator!=(const Vector3 &other) const
+	{
+		return !(*this == other);
+	}
+
+
+	bool operator<(const Vector3 &other) const
+	{
+		return x < other.x && y < other.y && z < other.z;
+	}
+
+	bool operator<=(const Vector3 &other) const
+	{
+		return x <= other.x && y <= other.y && z <= other.z;
+	}
+
+
+	bool operator>(const Vector3 &other) const
+	{
+		return x > other.x && y > other.y && z > other.z;
+	}
+
+	bool operator>=(const Vector3 &other) const
+	{
+		return x >= other.x && y >= other.y && z >= other.z;
+	}
+
 
 	void clear()
 	{
