@@ -22,6 +22,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # collect my source and headers
 set(SOURCES
 	src/main.cpp
+	src/App.cpp
+	src/Renderer.cpp
+	src/FluidSolver.cpp
+	src/WFSolver.cpp
 )
 
 # Find OpenGL Package
